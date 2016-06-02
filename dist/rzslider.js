@@ -23,6 +23,9 @@
 
 }(this, function(angular) {
   'use strict';
+  if (!angular.module && angular.default && angular.default.module) {
+    angular = angular.default;
+  }
   var module = angular.module('rzModule', [])
 
   .factory('RzSliderOptions', function() {
